@@ -2,6 +2,12 @@ import { Box, Button, Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
+import { useSpring, animated } from "react-spring";
+import TypeWriterEffect from "react-typewriter-effect";
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Particles from "react-particles-js";
+import mifoto from "../img/mifoto.png";
 
 const useStyles = makeStyles(() => ({
   img: {
@@ -21,7 +27,11 @@ const useStyles = makeStyles(() => ({
 }));
 
 const MainSection = () => {
+  const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } });
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
     <div
       style={{
@@ -30,6 +40,7 @@ const MainSection = () => {
         paddingBottom: "100px",
       }}
     >
+      {matches ? <Particles style={{ position: "absolute" }}></Particles> : ""}
       <Container fixed>
         <Grid container spacing={2}>
           <Box clone order={{ xs: 2, md: 1 }}>
@@ -48,7 +59,15 @@ const MainSection = () => {
                     variant="h4"
                     style={{ color: "#fff", marginBottom: "35px" }}
                   >
-                    Hey, I'm Carlos Torres
+                    <TypeWriterEffect
+                      textStyle={{
+                        fontSize: matches ? "1em" : "0.6em",
+                      }}
+                      startDelay={100}
+                      cursorColor="#fff"
+                      text="Hey, I'm Carlos Torres"
+                      typeSpeed={100}
+                    />
                   </Typography>
                   <Typography
                     variant="subtitle1"
@@ -105,12 +124,14 @@ const MainSection = () => {
                     transition: "all .4s ease",
                   }}
                 >
-                  <img
-                    className={classes.img}
-                    alt="complex"
-                    src="https://www.niemanlab.org/images/Greg-Emerson-edit-2.jpg"
-                    style={{ zIndex: 2 }}
-                  />
+                  <animated.div style={props}>
+                    <img
+                      className={classes.img}
+                      alt="complex"
+                      src={mifoto}
+                      style={{ zIndex: 2 }}
+                    />
+                  </animated.div>
                 </ButtonBase>
               </Box>
             </Grid>

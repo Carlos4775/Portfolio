@@ -8,6 +8,8 @@ import {
 } from "@material-ui/core";
 import ProjectCard from "./ProjectCard";
 import { makeStyles } from "@material-ui/core/styles";
+import { useState } from "react";
+import onepiece from "../img/One_Piece.png";
 
 const useStyles = makeStyles(() => ({
   button: {
@@ -20,6 +22,7 @@ const useStyles = makeStyles(() => ({
 
 const ProjectsSection = () => {
   const classes = useStyles();
+  const [moreProjects, setMoreProjects] = useState(false);
   return (
     <Box py={4}>
       <Container fixed>
@@ -109,6 +112,44 @@ const ProjectsSection = () => {
                 projectImage="https://ps.w.org/customizer-login-page/assets/icon-256x256.png?rev=1910305"
               />
             </Grid>
+            {moreProjects ? (
+              <>
+                <Grid item md={3}>
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="Email notification"
+                    projectDescription="Ten-Golf   13 noviembre, 2020"
+                    projectImage="https://image.freepik.com/free-vector/email-notification-smartphone-hand_102902-434.jpg"
+                  />
+                </Grid>
+                <Grid item md={3}>
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="Memory game"
+                    projectDescription="Ten-Golf   13 noviembre, 2020"
+                    projectImage="https://images.unsplash.com/photo-1585236902765-7fd9afa67781?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                  />
+                </Grid>
+                <Grid item md={3}>
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="One Piece Trivia"
+                    projectDescription="Ten-Golf   13 noviembre, 2020"
+                    projectImage={onepiece}
+                  />
+                </Grid>
+                <Grid item md={3}>
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="Survey Project"
+                    projectDescription="Ten-Golf   13 noviembre, 2020"
+                    projectImage="https://i.pinimg.com/originals/43/a9/37/43a9375e913e66b030ecc8dfe1214fc0.jpg"
+                  />
+                </Grid>
+              </>
+            ) : (
+              ""
+            )}
           </Grid>
         </Box>
         <Box
@@ -120,6 +161,7 @@ const ProjectsSection = () => {
             variant="contained"
             color="primary"
             className={classes.button}
+            onClick={() => setMoreProjects(true)}
           >
             See more projects
           </Button>

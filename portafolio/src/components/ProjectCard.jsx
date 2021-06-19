@@ -40,6 +40,7 @@ const ProjectCard = ({
           backgroundImage: `url(${projectImage})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          cursor: "pointer",
         }}
       >
         <CardHeader

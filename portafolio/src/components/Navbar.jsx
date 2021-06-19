@@ -1,3 +1,5 @@
+import { ListItem } from "@material-ui/core";
+import { List } from "@material-ui/core";
 import {
   AppBar,
   Toolbar,
@@ -10,23 +12,30 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import logo from "../img/logo.png";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import { BusinessCenter, Face, School, ContactPhone } from "@material-ui/icons";
 
 const headersData = [
   {
     label: "Services",
     href: "#services",
+    icon: <Face />,
   },
   {
     label: "Formation",
     href: "#formation",
+    icon: <School />,
   },
   {
     label: "Projects",
     href: "#projects",
+    icon: <BusinessCenter />,
   },
   {
     label: "Contact Me",
     href: "#contact",
+    icon: <ContactPhone />,
   },
 ];
 
@@ -57,6 +66,9 @@ const useStyles = makeStyles(() => ({
   menuItem: {
     borderBottom: "6px solid #73CCA8",
     borderRadius: "2px",
+  },
+  listItem: {
+    textDecoration: "none",
   },
 }));
 
@@ -129,9 +141,27 @@ export default function Navbar() {
   };
 
   const getDrawerChoices = () => {
-    return headersData.map(({ label, href }) => {
-      return <Link to={href}>{label}</Link>;
-    });
+    return (
+      <List component="nav" aria-label="main menu">
+        {headersData.map(({ label, href, icon }) => {
+          return (
+            <ListItem button>
+              <ListItemIcon>{icon}</ListItemIcon>
+              <ListItemText
+                primary={
+                  <Link
+                    to={href}
+                    style={{ textDecoration: "none", color: "gray" }}
+                  >
+                    {label}
+                  </Link>
+                }
+              />
+            </ListItem>
+          );
+        })}
+      </List>
+    );
   };
 
   const getMenuButtons = () => {

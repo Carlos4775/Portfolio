@@ -6,7 +6,7 @@ import { useSpring, animated } from "react-spring";
 import TypeWriterEffect from "react-typewriter-effect";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Particles from "react-particles-js";
-import mifoto from "../img/Greg-Emerson-edit-2.jpg";
+import mifoto from "../img/ctorres.jpg";
 
 const useStyles = makeStyles(() => ({
   img: {

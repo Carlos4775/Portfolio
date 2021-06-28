@@ -4,12 +4,14 @@ import {
   Button,
   Container,
   Divider,
+  Link,
   Grid,
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ProjectCard from "./ProjectCard";
 import onepiece from "../img/One_Piece.png";
+import progress from "../icons/workprogress.svg";
 
 const useStyles = makeStyles(() => ({
   button: {
@@ -41,32 +43,107 @@ const ProjectsSection = () => {
             style={{ display: "flex", justifyContent: "center" }}
           >
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
-                <ProjectCard
-                  projectHead="Headline"
-                  projectTitle="Torres Housell"
-                  projectDescription="Ten-Golf   13 noviembre, 2020"
-                  projectImage="https://image.freepik.com/vector-gratis/casa-venta_23-2147512912.jpg"
-                />
-              </Box>
+              <Link
+                href="https://compras-aca62.web.app"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                <Box
+                  py={3}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="Sistema de Compras"
+                    projectDescription="ASP.NET Core, ReactJS"
+                    projectImage="https://static.vecteezy.com/system/resources/thumbnails/001/624/159/original/online-shopping-animation-free-video.jpg"
+                  />
+                </Box>
+              </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
+              <Link
+                href="https://bsite.net/carlos4775/"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                <Box
+                  py={3}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="Cuentas por Cobrar"
+                    projectDescription="ASP.NET Framework MVC"
+                    projectImage="https://images2.listindiario.com/imagen/2020/09/30/637/637330/680x460/202009301254001/manejo-optimo-de-las-cuentas-por-cobrar.jpeg"
+                  />
+                </Box>
+              </Link>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Link
+                href="https://admin-page-ae63f.web.app/"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                <Box
+                  py={3}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="Administrator Page"
+                    projectDescription="ReactJS, Twin macro, SC"
+                    projectImage="https://ps.w.org/customizer-login-page/assets/icon-256x256.png?rev=1910305"
+                  />
+                </Box>
+              </Link>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Link
+                href="https://addresses-e3ee7.web.app/"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                <Box
+                  py={3}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="Cliente domicilio"
+                    projectDescription="ReactJS, JSON Server"
+                    projectImage="https://images.indianexpress.com/2018/08/how-to-download-google-maps-areas-offline.jpg"
+                  />
+                </Box>
+              </Link>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Box
+                py={3}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
                 <ProjectCard
                   projectHead="Headline"
                   projectTitle="HBO-Redesign"
-                  projectDescription="Ten-Golf   13 noviembre, 2020"
+                  projectDescription="ASP.NET Core, ReactJS, JWT"
                   projectImage="https://media.gettyimages.com/photos/in-this-photo-illustration-the-home-box-office-logo-is-seen-displayed-picture-id1146342175?s=612x612"
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
-                <ProjectCard
-                  projectHead="Headline"
-                  projectTitle="Compras"
-                  projectDescription="Ten-Golf   13 noviembre, 2020"
-                  projectImage="https://st4.depositphotos.com/7239616/i/600/depositphotos_396555648-stock-photo-shopping-cart-school-supply-school.jpg"
+                  projectStatus={
+                    <div
+                      style={{
+                        position: "absolute",
+                        display: "flex",
+                        backgroundColor: "#ffffff",
+                        borderRadius: "50%",
+                        padding: "3px",
+                      }}
+                    >
+                      <img src={progress} />
+                    </div>
+                  }
                 />
               </Box>
             </Grid>
@@ -75,48 +152,73 @@ const ProjectsSection = () => {
                 <ProjectCard
                   projectHead="Headline"
                   projectTitle="Lito-Multitask"
-                  projectDescription="Ten-Golf   13 noviembre, 2020"
+                  projectDescription="NODE JS, React JS, MongoDB"
                   projectImage="https://thetodo.net/_nuxt/img/undraw_Note_list_re_r4u9.f982e8c.svg"
+                  projectStatus={
+                    <div
+                      style={{
+                        position: "absolute",
+                        display: "flex",
+                        backgroundColor: "#ffffff",
+                        borderRadius: "50%",
+                        padding: "3px",
+                      }}
+                    >
+                      <img src={progress} />
+                    </div>
+                  }
                 />
               </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Link
+                href="https://postalvida.wordpress.com/"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                <Box
+                  py={3}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="Blog de autoyuda"
+                    projectDescription="Wordpress"
+                    projectImage="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1159404116.jpg?resize=480:*"
+                  />
+                </Box>
+              </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
                 <ProjectCard
                   projectHead="Headline"
                   projectTitle="Ruleta Bay"
-                  projectDescription="Ten-Golf   13 noviembre, 2020"
+                  projectDescription="React Native, Firebase Cloud"
                   projectImage="https://app-sorteos.com/img/svg/undraw_taken.svg"
+                  projectStatus={
+                    <div
+                      style={{
+                        position: "absolute",
+                        display: "flex",
+                        backgroundColor: "#ffffff",
+                        borderRadius: "50%",
+                        padding: "3px",
+                      }}
+                    >
+                      <img src={progress} />
+                    </div>
+                  }
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
+            {/*<Grid item xs={12} sm={6} md={4} lg={3}>
               <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
                 <ProjectCard
                   projectHead="Headline"
-                  projectTitle="Cafeteria MARICAR"
+                  projectTitle="Caja UNAPEC"
                   projectDescription="Ten-Golf   13 noviembre, 2020"
-                  projectImage="https://image.freepik.com/vector-gratis/ilustracion-bar-cocteles_53876-44057.jpg"
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
-                <ProjectCard
-                  projectHead="Headline"
-                  projectTitle="Cuentas por Cobrar"
-                  projectDescription="Ten-Golf   13 noviembre, 2020"
-                  projectImage="https://images2.listindiario.com/imagen/2020/09/30/637/637330/680x460/202009301254001/manejo-optimo-de-las-cuentas-por-cobrar.jpeg"
-                />
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
-                <ProjectCard
-                  projectHead="Headline"
-                  projectTitle="Administrator Page"
-                  projectDescription="Ten-Golf   13 noviembre, 2020"
-                  projectImage="https://ps.w.org/customizer-login-page/assets/icon-256x256.png?rev=1910305"
+                  projectImage="https://images.unsplash.com/photo-1607609972246-a14762f20d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
                 />
               </Box>
             </Grid>
@@ -177,10 +279,10 @@ const ProjectsSection = () => {
               </>
             ) : (
               ""
-            )}
+            )}*/}
           </Grid>
         </Box>
-        <Box
+        {/* <Box
           my={3}
           pt={6}
           style={{ display: "flex", justifyContent: "center" }}
@@ -193,7 +295,7 @@ const ProjectsSection = () => {
           >
             See more projects
           </Button>
-        </Box>
+        </Box>*/}
       </Container>
     </Box>
   );

@@ -1,14 +1,11 @@
 import {
-  Avatar,
   Card,
   CardContent,
   CardMedia,
   CardHeader,
-  IconButton,
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import ShareIcon from "@material-ui/icons/Share";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -18,13 +15,14 @@ const useStyles = makeStyles(() => ({
     height: 0,
     paddingTop: "56.25%", // 16:9
   },
-  avatar: {
-    backgroundColor: "#181A1B",
-    opacity: "0.7",
-  },
 }));
 
-const ProjectCard = ({ projectTitle, projectDescription, projectImage }) => {
+const ProjectCard = ({
+  projectTitle,
+  projectDescription,
+  projectImage,
+  projectStatus,
+}) => {
   const classes = useStyles();
 
   return (
@@ -37,15 +35,7 @@ const ProjectCard = ({ projectTitle, projectDescription, projectImage }) => {
           cursor: "pointer",
         }}
       >
-        <CardHeader
-          avatar={
-            <Avatar aria-label="recipe" alt="Share" className={classes.avatar}>
-              <IconButton aria-label="share">
-                <ShareIcon style={{ color: "white" }} />
-              </IconButton>
-            </Avatar>
-          }
-        />
+        <CardHeader avatar={projectStatus} />
         <CardMedia className={classes.media} />
         <CardContent></CardContent>
       </Card>

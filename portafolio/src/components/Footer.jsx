@@ -12,7 +12,7 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import instagramicon from "../icons/iconmonstr-instagram-11.svg";
 import emailicon from "../icons/email_black_24dp.svg";
-import twittericon from "../icons/iconmonstr-twitter-1.svg";
+import linkedinicon from "../icons/iconmonstr-linkedin-3.svg";
 import githubicon from "../icons/iconmonstr-github-1.svg";
 
 const useStyles = makeStyles(() => ({
@@ -45,6 +45,7 @@ const Footer = () => {
         marginTop: "60px",
         position: "relative",
       }}
+      id="contact"
     >
       <div style={{ paddingBottom: "50px" }}>
         <Container fixed>
@@ -65,6 +66,7 @@ const Footer = () => {
                   variant="contained"
                   color="primary"
                   className={classes.button}
+                  href="mailto:carlos.torres.graciano@outlook.com"
                 >
                   Get in Touch
                 </Button>
@@ -76,34 +78,60 @@ const Footer = () => {
                 aria-label="main mailbox folders"
                 className={classes.list}
               >
-                <ListItem button>
-                  <ListItemIcon>
-                    <img src={instagramicon} alt="instagram" />
-                  </ListItemIcon>
-                  <ListItemText primary="carlost_06" />
-                </ListItem>
-                <ListItem button>
-                  <ListItemIcon>
-                    <img src={emailicon} alt="email" />
-                  </ListItemIcon>
-                  <p style={{ display: "inline-block" }}>
-                    carlos.torres.graciano
-                    <br />
-                    @outlook.com
-                  </p>
-                </ListItem>
-                <ListItem button>
-                  <ListItemIcon>
-                    <img src={twittericon} alt="twitter" />
-                  </ListItemIcon>
-                  <ListItemText primary="@Carlos4775" />
-                </ListItem>
-                <ListItem button>
-                  <ListItemIcon>
-                    <img src={githubicon} alt="github" />
-                  </ListItemIcon>
-                  <ListItemText primary="@Carlos4775" />
-                </ListItem>
+                <a
+                  href="https://www.instagram.com/carlost_06/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <ListItem button>
+                    <ListItemIcon>
+                      <img src={instagramicon} alt="instagram" />
+                    </ListItemIcon>
+                    <ListItemText primary="carlost_06" />
+                  </ListItem>
+                </a>
+                <a
+                  href="mailto:carlos.torres.graciano@outlook.com"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <ListItem button>
+                    <ListItemIcon>
+                      <img src={emailicon} alt="email" />
+                    </ListItemIcon>
+                    <p style={{ display: "inline-block" }}>
+                      carlos.torres.graciano
+                      <br />
+                      @outlook.com
+                    </p>
+                  </ListItem>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/carlosmtorresg/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <ListItem button>
+                    <ListItemIcon>
+                      <img src={linkedinicon} alt="linkedin" />
+                    </ListItemIcon>
+                    <ListItemText primary="carlosmtorresg" />
+                  </ListItem>
+                </a>
+                <a
+                  href="https://github.com/Carlos4775"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <ListItem button>
+                    <ListItemIcon>
+                      <img src={githubicon} alt="github" />
+                    </ListItemIcon>
+                    <ListItemText primary="@Carlos4775" />
+                  </ListItem>
+                </a>
               </List>
             </Grid>
           </Grid>

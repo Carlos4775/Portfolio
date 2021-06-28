@@ -1,9 +1,8 @@
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Typography, Divider } from "@material-ui/core";
 import SimpleCard from "../components/SimpleCard";
 import tag from "../icons/code_black_24dp.svg";
 import person from "../icons/manage_accounts_black_24dp.svg";
 import speed from "../icons/speed_black_24dp.svg";
-import Divider from "@material-ui/core/Divider";
 
 const ServicesSection = () => {
   return (
@@ -18,7 +17,11 @@ const ServicesSection = () => {
           </Typography>
         </Box>
         <Box>
-          <Grid container spacing={4}>
+          <Grid
+            container
+            spacing={4}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <Grid item xs={12} md={4}>
               <SimpleCard
                 title="HTML/CSS"

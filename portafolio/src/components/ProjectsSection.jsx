@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -6,9 +7,8 @@ import {
   Grid,
   Typography,
 } from "@material-ui/core";
-import ProjectCard from "./ProjectCard";
 import { makeStyles } from "@material-ui/core/styles";
-import { useState } from "react";
+import ProjectCard from "./ProjectCard";
 import onepiece from "../img/One_Piece.png";
 
 const useStyles = makeStyles(() => ({
@@ -37,11 +37,11 @@ const ProjectsSection = () => {
         <Box>
           <Grid
             container
-            spacing={3}
-            style={{ display: "flex", justifyContent: "center " }}
+            spacing={4}
+            style={{ display: "flex", justifyContent: "center" }}
           >
-            <Grid item md={3}>
-              <Box pt={3} pb={3}>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
                 <ProjectCard
                   projectHead="Headline"
                   projectTitle="Torres Housell"
@@ -50,8 +50,8 @@ const ProjectsSection = () => {
                 />
               </Box>
             </Grid>
-            <Grid item md={3}>
-              <Box pt={3} pb={3}>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
                 <ProjectCard
                   projectHead="Headline"
                   projectTitle="HBO-Redesign"
@@ -60,8 +60,8 @@ const ProjectsSection = () => {
                 />
               </Box>
             </Grid>
-            <Grid item md={3}>
-              <Box pt={3} pb={3}>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
                 <ProjectCard
                   projectHead="Headline"
                   projectTitle="Compras"
@@ -70,8 +70,8 @@ const ProjectsSection = () => {
                 />
               </Box>
             </Grid>
-            <Grid item md={3}>
-              <Box pt={3} pb={3}>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
                 <ProjectCard
                   projectHead="Headline"
                   projectTitle="Lito-Multitask"
@@ -80,71 +80,99 @@ const ProjectsSection = () => {
                 />
               </Box>
             </Grid>
-            <Grid item md={3}>
-              <ProjectCard
-                projectHead="Headline"
-                projectTitle="Ruleta Bay"
-                projectDescription="Ten-Golf   13 noviembre, 2020"
-                projectImage="https://app-sorteos.com/img/svg/undraw_taken.svg"
-              />
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
+                <ProjectCard
+                  projectHead="Headline"
+                  projectTitle="Ruleta Bay"
+                  projectDescription="Ten-Golf   13 noviembre, 2020"
+                  projectImage="https://app-sorteos.com/img/svg/undraw_taken.svg"
+                />
+              </Box>
             </Grid>
-            <Grid item md={3}>
-              <ProjectCard
-                projectHead="Headline"
-                projectTitle="Cafeteria MARICAR"
-                projectDescription="Ten-Golf   13 noviembre, 2020"
-                projectImage="https://image.freepik.com/vector-gratis/ilustracion-bar-cocteles_53876-44057.jpg"
-              />
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
+                <ProjectCard
+                  projectHead="Headline"
+                  projectTitle="Cafeteria MARICAR"
+                  projectDescription="Ten-Golf   13 noviembre, 2020"
+                  projectImage="https://image.freepik.com/vector-gratis/ilustracion-bar-cocteles_53876-44057.jpg"
+                />
+              </Box>
             </Grid>
-            <Grid item md={3}>
-              <ProjectCard
-                projectHead="Headline"
-                projectTitle="Cuentas por Cobrar"
-                projectDescription="Ten-Golf   13 noviembre, 2020"
-                projectImage="https://images2.listindiario.com/imagen/2020/09/30/637/637330/680x460/202009301254001/manejo-optimo-de-las-cuentas-por-cobrar.jpeg"
-              />
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
+                <ProjectCard
+                  projectHead="Headline"
+                  projectTitle="Cuentas por Cobrar"
+                  projectDescription="Ten-Golf   13 noviembre, 2020"
+                  projectImage="https://images2.listindiario.com/imagen/2020/09/30/637/637330/680x460/202009301254001/manejo-optimo-de-las-cuentas-por-cobrar.jpeg"
+                />
+              </Box>
             </Grid>
-            <Grid item md={3}>
-              <ProjectCard
-                projectHead="Headline"
-                projectTitle="Administrator Page"
-                projectDescription="Ten-Golf   13 noviembre, 2020"
-                projectImage="https://ps.w.org/customizer-login-page/assets/icon-256x256.png?rev=1910305"
-              />
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
+                <ProjectCard
+                  projectHead="Headline"
+                  projectTitle="Administrator Page"
+                  projectDescription="Ten-Golf   13 noviembre, 2020"
+                  projectImage="https://ps.w.org/customizer-login-page/assets/icon-256x256.png?rev=1910305"
+                />
+              </Box>
             </Grid>
             {moreProjects ? (
               <>
-                <Grid item md={3}>
-                  <ProjectCard
-                    projectHead="Headline"
-                    projectTitle="Email notification"
-                    projectDescription="Ten-Golf   13 noviembre, 2020"
-                    projectImage="https://image.freepik.com/free-vector/email-notification-smartphone-hand_102902-434.jpg"
-                  />
+                <Grid item xs={12} sm={6} md={4} lg={3}>
+                  <Box
+                    py={3}
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
+                    <ProjectCard
+                      projectHead="Headline"
+                      projectTitle="Email notification"
+                      projectDescription="Ten-Golf   13 noviembre, 2020"
+                      projectImage="https://image.freepik.com/free-vector/email-notification-smartphone-hand_102902-434.jpg"
+                    />
+                  </Box>
                 </Grid>
-                <Grid item md={3}>
-                  <ProjectCard
-                    projectHead="Headline"
-                    projectTitle="Memory game"
-                    projectDescription="Ten-Golf   13 noviembre, 2020"
-                    projectImage="https://images.unsplash.com/photo-1585236902765-7fd9afa67781?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                  />
+                <Grid item xs={12} sm={6} md={4} lg={3}>
+                  <Box
+                    py={3}
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
+                    <ProjectCard
+                      projectHead="Headline"
+                      projectTitle="Memory game"
+                      projectDescription="Ten-Golf   13 noviembre, 2020"
+                      projectImage="https://images.unsplash.com/photo-1585236902765-7fd9afa67781?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                    />
+                  </Box>
                 </Grid>
-                <Grid item md={3}>
-                  <ProjectCard
-                    projectHead="Headline"
-                    projectTitle="One Piece Trivia"
-                    projectDescription="Ten-Golf   13 noviembre, 2020"
-                    projectImage={onepiece}
-                  />
+                <Grid item xs={12} sm={6} md={4} lg={3}>
+                  <Box
+                    py={3}
+                    style={{ display: "flex", justifyContent: "center " }}
+                  >
+                    <ProjectCard
+                      projectHead="Headline"
+                      projectTitle="One Piece Trivia"
+                      projectDescription="Ten-Golf   13 noviembre, 2020"
+                      projectImage={onepiece}
+                    />
+                  </Box>
                 </Grid>
-                <Grid item md={3}>
-                  <ProjectCard
-                    projectHead="Headline"
-                    projectTitle="Survey Project"
-                    projectDescription="Ten-Golf   13 noviembre, 2020"
-                    projectImage="https://i.pinimg.com/originals/43/a9/37/43a9375e913e66b030ecc8dfe1214fc0.jpg"
-                  />
+                <Grid item xs={12} sm={6} md={4} lg={3}>
+                  <Box
+                    py={3}
+                    style={{ display: "flex", justifyContent: "center " }}
+                  >
+                    <ProjectCard
+                      projectHead="Headline"
+                      projectTitle="Survey Project"
+                      projectDescription="Ten-Golf   13 noviembre, 2020"
+                      projectImage="https://i.pinimg.com/originals/43/a9/37/43a9375e913e66b030ecc8dfe1214fc0.jpg"
+                    />
+                  </Box>
                 </Grid>
               </>
             ) : (

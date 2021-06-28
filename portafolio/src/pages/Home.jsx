@@ -15,7 +15,7 @@ const Home = () => {
         <div id="formation">
           <FormationSection
             titleAbilities="Abilities"
-            text="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem."
+            text="An accomplished and skilled person with experience in JavaScript, HTML, CSS, React JS, and other technologies, both frontend and backend. With a firm belief in the power of the web and an intense desire to learn."
           />
         </div>
         <div id="projects">

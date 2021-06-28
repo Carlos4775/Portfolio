@@ -42,8 +42,7 @@ const headersData = [
 const useStyles = makeStyles(() => ({
   header: {
     backgroundColor: "#2E3445",
-    paddingRight: "80px",
-    paddingLeft: "80px",
+    padding: "0px 80px",
     "@media (max-width: 900px)": {
       paddingLeft: 0,
     },
@@ -82,6 +81,10 @@ export default function Navbar() {
 
   const { mobileView, drawerOpen } = state;
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     const setResponsiveness = () => {
       return window.innerWidth < 900
@@ -97,7 +100,15 @@ export default function Navbar() {
   const displayDesktop = () => {
     return (
       <Toolbar className={toolbar}>
-        <img src={logo} alt="logo" height="120px" width="auto" />
+        <img
+          src={logo}
+          alt="logo"
+          height="120px"
+          width="auto"
+          onClick={scrollToTop}
+          style={{ cursor: "pointer" }}
+        />
+
         <div>{getMenuButtons()}</div>
       </Toolbar>
     );
@@ -134,7 +145,13 @@ export default function Navbar() {
         </Drawer>
 
         <div>
-          <img src={logo} alt="logo" height="80px" width="auto" />
+          <img
+            src={logo}
+            alt="logo"
+            height="80px"
+            width="auto"
+            onClick={scrollToTop}
+          />
         </div>
       </Toolbar>
     );
@@ -145,7 +162,7 @@ export default function Navbar() {
       <List component="nav" aria-label="main menu">
         {headersData.map(({ label, href, icon }) => {
           return (
-            <ListItem button>
+            <ListItem button key={label}>
               <ListItemIcon>{icon}</ListItemIcon>
               <ListItemText
                 primary={

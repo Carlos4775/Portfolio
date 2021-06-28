@@ -1,13 +1,12 @@
 import { Box, Button, Container, Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import { useSpring, animated } from "react-spring";
 import TypeWriterEffect from "react-typewriter-effect";
-import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Particles from "react-particles-js";
-import mifoto from "../img/mifoto.png";
+import mifoto from "../img/Greg-Emerson-edit-2.jpg";
 
 const useStyles = makeStyles(() => ({
   img: {
@@ -36,8 +35,7 @@ const MainSection = () => {
     <div
       style={{
         backgroundColor: "#222733",
-        paddingTop: "100px",
-        paddingBottom: "100px",
+        padding: "100px 0px",
       }}
     >
       {matches ? <Particles style={{ position: "absolute" }}></Particles> : ""}
@@ -54,21 +52,18 @@ const MainSection = () => {
             >
               <Grid item xs container direction="column" spacing={2}>
                 <Grid item xs>
-                  <Typography
-                    gutterBottom
-                    variant="h4"
-                    style={{ color: "#fff", marginBottom: "35px" }}
-                  >
-                    <TypeWriterEffect
-                      textStyle={{
-                        fontSize: matches ? "1em" : "0.6em",
-                      }}
-                      startDelay={100}
-                      cursorColor="#fff"
-                      text="Hey, I'm Carlos Torres"
-                      typeSpeed={100}
-                    />
-                  </Typography>
+                  <TypeWriterEffect
+                    textStyle={{
+                      fontSize: matches ? "2.3em" : "1.5em",
+                      color: "#fff",
+                      marginBottom: "30px",
+                      fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+                    }}
+                    startDelay={100}
+                    cursorColor="#fff"
+                    text="Hey, I'm Carlos Torres"
+                    typeSpeed={100}
+                  />
                   <Typography
                     variant="subtitle1"
                     gutterBottom
@@ -86,9 +81,9 @@ const MainSection = () => {
                       marginBottom: "40px",
                     }}
                   >
-                    I’m a software engineering student web developer - C# -
-                    Javascript - Java Passionate for Open Source Technology and
-                    javascript
+                    I’m a software engineering student web developer who uses
+                    C#, Java and JavaScript. Passionate for Open Source
+                    Technology and web design.
                   </Typography>
                 </Grid>
                 <Grid item>
@@ -96,6 +91,7 @@ const MainSection = () => {
                     variant="contained"
                     color="primary"
                     className={classes.button}
+                    href="#projects"
                   >
                     Projects
                   </Button>
@@ -127,7 +123,7 @@ const MainSection = () => {
                   <animated.div style={props}>
                     <img
                       className={classes.img}
-                      alt="complex"
+                      alt="Profile"
                       src={mifoto}
                       style={{ zIndex: 2 }}
                     />

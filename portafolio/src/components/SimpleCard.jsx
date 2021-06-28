@@ -1,8 +1,6 @@
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
 import { useRef, useState } from "react";
+import { Card, CardContent, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import { animated, useSpring } from "react-spring";
 
 const useStyles = makeStyles({
@@ -11,21 +9,18 @@ const useStyles = makeStyles({
   },
   title: {
     fontSize: 24,
-    paddingTop: "10px",
-    paddingBottom: "10px",
+    padding: "10px 0px",
     display: "flex",
     justifyContent: "center",
     color: "#000",
   },
   subtitle: {
-    paddingTop: "10px",
-    paddingBottom: "10px",
+    padding: "10px 0px",
     display: "flex",
     justifyContent: "center",
   },
   text: {
-    paddingTop: "10px",
-    paddingBottom: "10px",
+    padding: "10px 0px",
     textAlign: "center",
   },
   icon: {
@@ -91,7 +86,7 @@ export default function SimpleCard({ title, icon, subtitle, text }) {
         // If hovered we want it to overlap other cards when it scales up
         zIndex: isHovered ? 2 : 1,
         // Interpolate function to handle css changes
-        transform: animatedProps.xys.interpolate(
+        transform: animatedProps.xys.to(
           (x, y, s) =>
             `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
         ),
@@ -118,7 +113,7 @@ export default function SimpleCard({ title, icon, subtitle, text }) {
           <Typography className={classes.subtitle} color="textSecondary">
             {subtitle}
           </Typography>
-          <Typography variant="body2" component="p" className={classes.text}>
+          <Typography variant="body2" className={classes.text}>
             {text}
           </Typography>
         </CardContent>

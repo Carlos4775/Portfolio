@@ -14,8 +14,7 @@ import "../figure.css";
 const useStyles = makeStyles({
   titleAbilities: {
     fontSize: 24,
-    paddingTop: "10px",
-    paddingBottom: "10px",
+    padding: "10px 0px",
     color: "#000",
     fontWeight: "bold",
     display: "flex",
@@ -23,31 +22,29 @@ const useStyles = makeStyles({
   },
   titleEducation: {
     fontSize: 24,
-    paddingTop: "10px",
-    paddingBottom: "10px",
+    padding: "10px 0px",
     color: "#000",
     fontWeight: "bold",
     display: "flex",
     justifyContent: "center",
   },
   text: {
-    paddingTop: "10px",
-    paddingBottom: "10px",
+    padding: "10px 0px",
   },
 });
 
-const FormationSection = ({ titleAbilities, titleEducation, text, list }) => {
+const FormationSection = ({ titleAbilities, text }) => {
   const classes = useStyles();
   return (
     <Box py={4}>
       <Container fixed>
         <Box py={3} my={3}>
-          <Typography variant="h5" gutterBottom>
-            <Box my={3} color="#939393">
+          <Box my={3} color="#939393">
+            <Typography variant="h5" gutterBottom>
               FORMATION
-            </Box>
-            <Divider variant="fullWidth" component="div" />
-          </Typography>
+            </Typography>
+          </Box>
+          <Divider variant="fullWidth" component="div" />
         </Box>
         <Box>
           <Grid container spacing={3}>
@@ -68,72 +65,62 @@ const FormationSection = ({ titleAbilities, titleEducation, text, list }) => {
               </Typography>
               <List component="nav">
                 <Grid container direction="row">
-                  <Grid
-                    item
-                    xs={12}
-                    sm={6}
-                    style={{ paddingTop: "30px", paddingBottom: "30px" }}
-                  >
+                  <Grid item xs={12} sm={6} style={{ padding: "30px 0px" }}>
                     <Grid container direction="column">
                       <Grid item xs={12} sm={6}>
                         <ListItem button>
                           <ListItemIcon>
-                            <img src={htmlicon} alt="" />
+                            <img src={htmlicon} alt="Html" />
                           </ListItemIcon>
                           <ListItemText primary="HTML" />
                         </ListItem>
                         <ListItem button>
                           <ListItemIcon>
-                            <img src={cssicon} alt="" />
+                            <img src={cssicon} alt="CSS" />
                           </ListItemIcon>
                           <ListItemText primary="CSS" />
                         </ListItem>
                         <ListItem button>
                           <ListItemIcon>
-                            <img src={javascripticon} alt="" />
+                            <img src={javascripticon} alt="JavaScript" />
                           </ListItemIcon>
                           <ListItemText primary="JavaScript" />
                         </ListItem>
                         <ListItem button>
                           <ListItemIcon>
-                            <img src={reactjsicon} alt="" />
+                            <img src={reactjsicon} alt="React JS" />
                           </ListItemIcon>
                           <ListItemText primary="ReactJS" />
                         </ListItem>
                       </Grid>
                     </Grid>
                   </Grid>
-                  <Grid
-                    item
-                    xs={12}
-                    sm={6}
-                    style={{ paddingTop: "30px", paddingBottom: "30px" }}
-                  >
+                  <Grid item xs={12} sm={6} style={{ padding: "30px 0px" }}>
                     <Grid container direction="column">
                       <Grid item>
                         <ListItem button>
                           <ListItemIcon>
-                            <img src={wordpressicon} alt="" />
+                            <img src={wordpressicon} alt="Wordpress" />
                           </ListItemIcon>
                           <ListItemText primary="WordPress" />
                         </ListItem>
                         <ListItem button>
                           <ListItemIcon>
-                            <img src={sqlicon} alt="" />
+                            <img src={sqlicon} alt="SQL Server" />
                           </ListItemIcon>
                           <ListItemText primary="SQL Server" />
                         </ListItem>
                         <ListItem button>
                           <ListItemIcon>
-                            <img src={bemicon} alt="" />
+                            <img src={bemicon} alt="BEM" />
                           </ListItemIcon>
                           <ListItemText primary="BEM" />
                         </ListItem>
                         <ListItem button>
                           <ListItemIcon>
-                            <img src={figmaicon} alt="" />
+                            <img src={figmaicon} alt="Figma" />
                           </ListItemIcon>
-                          <ListItemText primary="Figma Prototype" />
+                          <ListItemText primary="Web Design" />
                         </ListItem>
                       </Grid>
                     </Grid>
@@ -158,25 +145,23 @@ const FormationSection = ({ titleAbilities, titleEducation, text, list }) => {
                 <Grid xs={8} item>
                   <Box mt={3}>
                     <Typography component="div">
-                      <Box fontWeight="fontWeightBold">
-                        Técnico en informática
-                      </Box>
+                      <Box fontWeight="fontWeightBold">IT Technician</Box>
                     </Typography>
                     <Typography component="div">
                       <Box fontWeight="fontWeightLight" fontSize={18}>
-                        Colegio María Inmaculada
+                        María Inmaculada School
                       </Box>
                     </Typography>
                   </Box>
                   <Box mt={13}>
                     <Typography component="div">
                       <Box fontWeight="fontWeightBold">
-                        Ingeniería de software
+                        Software Engineering
                       </Box>
                     </Typography>
                     <Typography component="div">
                       <Box fontWeight="fontWeightLight" fontSize={18}>
-                        Universidad APEC
+                        APEC University
                       </Box>
                     </Typography>
                   </Box>

@@ -1,15 +1,16 @@
+import {
+  Avatar,
+  Card,
+  CardContent,
+  CardMedia,
+  CardHeader,
+  IconButton,
+  Typography,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
 import ShareIcon from "@material-ui/icons/Share";
-import { Box } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     maxWidth: 345,
   },
@@ -23,12 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ProjectCard = ({
-  projectTitle,
-  projectDescription,
-  projectHead,
-  projectImage,
-}) => {
+const ProjectCard = ({ projectTitle, projectDescription, projectImage }) => {
   const classes = useStyles();
 
   return (
@@ -36,10 +32,8 @@ const ProjectCard = ({
       <Card
         className={classes.root}
         style={{
-          background: "#000",
           backgroundImage: `url(${projectImage})`,
           backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
           cursor: "pointer",
         }}
       >
@@ -52,34 +46,19 @@ const ProjectCard = ({
             </Avatar>
           }
         />
-        <CardMedia className={classes.media} image="/" title="Paella dish" />
-        <CardContent>
-          <Typography
-            variant="h6"
-            color="textSecondary"
-            component="p"
-            style={{
-              fontWeight: "bold",
-              color: "#fff",
-              textShadow: "2px 2px 3px #000",
-            }}
-          >
-            {projectHead}
-          </Typography>
-        </CardContent>
+        <CardMedia className={classes.media} />
+        <CardContent></CardContent>
       </Card>
-
       <Typography
         variant="h6"
-        color="textSecondary"
+        color="textPrimary"
         component="p"
-        style={{ marginTop: "20px" }}
+        style={{ marginTop: "20px", fontWeight: "bold" }}
       >
-        <Box fontWeight="fontWeightBold" style={{ color: "#000" }}>
-          {projectTitle}
-        </Box>
+        {projectTitle}
       </Typography>
-      <Typography variant="p" color="textSecondary" component="p">
+
+      <Typography variant="body2" color="textSecondary">
         {projectDescription}
       </Typography>
     </div>

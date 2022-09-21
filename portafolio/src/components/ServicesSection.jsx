@@ -26,7 +26,7 @@ const ServicesSection = () => {
               <SimpleCard
                 title="HTML/CSS"
                 icon={<img src={tag} alt="tag" />}
-                subtitle="User Focused"
+                subtitle="User focused"
                 text="A website should be designed for the people who will use it, so that's exactly what I do. User focused design should be the primary goal of any website."
               />
             </Grid>
@@ -34,7 +34,7 @@ const ServicesSection = () => {
               <SimpleCard
                 title="Application UI"
                 icon={<img src={person} alt="person" />}
-                subtitle="Responsive and Fast"
+                subtitle="Responsive and fast"
                 text="Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible."
               />
             </Grid>
@@ -42,7 +42,7 @@ const ServicesSection = () => {
               <SimpleCard
                 title="Performance"
                 icon={<img src={speed} alt="speed" />}
-                subtitle="Effective Process"
+                subtitle="Effective process"
                 text="Having a fast website is key to keeping people around converts them into customers. There are a myriad of techniques involved in making a fast."
               />
             </Grid>

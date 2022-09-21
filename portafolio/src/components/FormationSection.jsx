@@ -9,6 +9,8 @@ import wordpressicon from "../icons/web_black_24dp.svg";
 import sqlicon from "../icons/dns_black_24dp.svg";
 import bemicon from "../icons/text_format_black_24dp.svg";
 import figmaicon from "../icons/account_tree_black_24dp.svg";
+import dotneticon from "../icons/application-cog.svg";
+import javaicon from "../icons/application-braces.svg";
 import "../figure.css";
 
 const useStyles = makeStyles({
@@ -88,9 +90,9 @@ const FormationSection = ({ titleAbilities, text }) => {
                         </ListItem>
                         <ListItem button>
                           <ListItemIcon>
-                            <img src={reactjsicon} alt="React JS" />
+                            <img src={dotneticon} alt="Dotnet" />
                           </ListItemIcon>
-                          <ListItemText primary="ReactJS" />
+                          <ListItemText primary=".NET Framework / Core" />
                         </ListItem>
                       </Grid>
                     </Grid>
@@ -112,9 +114,9 @@ const FormationSection = ({ titleAbilities, text }) => {
                         </ListItem>
                         <ListItem button>
                           <ListItemIcon>
-                            <img src={bemicon} alt="BEM" />
+                            <img src={javaicon} alt="Java web / JSF" />
                           </ListItemIcon>
-                          <ListItemText primary="BEM" />
+                          <ListItemText primary="Java web / JSF" />
                         </ListItem>
                         <ListItem button>
                           <ListItemIcon>

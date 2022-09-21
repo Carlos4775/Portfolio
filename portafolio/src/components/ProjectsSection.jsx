@@ -54,7 +54,7 @@ const ProjectsSection = () => {
                 >
                   <ProjectCard
                     projectHead="Headline"
-                    projectTitle="Sistema de Compras"
+                    projectTitle="Shopping system"
                     projectDescription="ASP.NET Core, ReactJS"
                     projectImage="https://static.vecteezy.com/system/resources/thumbnails/001/624/159/original/online-shopping-animation-free-video.jpg"
                   />
@@ -73,7 +73,7 @@ const ProjectsSection = () => {
                 >
                   <ProjectCard
                     projectHead="Headline"
-                    projectTitle="Cuentas por Cobrar"
+                    projectTitle="Accounts receivable"
                     projectDescription="ASP.NET Framework MVC"
                     projectImage="https://images2.listindiario.com/imagen/2020/09/30/637/637330/680x460/202009301254001/manejo-optimo-de-las-cuentas-por-cobrar.jpeg"
                   />
@@ -92,7 +92,7 @@ const ProjectsSection = () => {
                 >
                   <ProjectCard
                     projectHead="Headline"
-                    projectTitle="Administrator Page"
+                    projectTitle="Administrator page"
                     projectDescription="ReactJS, Twin macro, SC"
                     projectImage="https://ps.w.org/customizer-login-page/assets/icon-256x256.png?rev=1910305"
                   />
@@ -111,7 +111,7 @@ const ProjectsSection = () => {
                 >
                   <ProjectCard
                     projectHead="Headline"
-                    projectTitle="Cliente domicilio"
+                    projectTitle="Home customer"
                     projectDescription="ReactJS, JSON Server"
                     projectImage="https://images.indianexpress.com/2018/08/how-to-download-google-maps-areas-offline.jpg"
                   />
@@ -119,35 +119,28 @@ const ProjectsSection = () => {
               </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Box
-                py={3}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
+              <Link
+                href="https://hbo-redesign.web.app/"
+                style={{ textDecoration: "none" }}
+                target="_blank"
               >
-                <ProjectCard
-                  projectHead="Headline"
-                  projectTitle="HBO-Redesign"
-                  projectDescription="ASP.NET Core, ReactJS, JWT"
-                  projectImage="https://media.gettyimages.com/photos/in-this-photo-illustration-the-home-box-office-logo-is-seen-displayed-picture-id1146342175?s=612x612"
-                  projectStatus={
-                    <div
-                      style={{
-                        position: "absolute",
-                        display: "flex",
-                        backgroundColor: "#ffffff",
-                        borderRadius: "50%",
-                        padding: "3px",
-                      }}
-                    >
-                      <img src={progress} />
-                    </div>
-                  }
-                />
-              </Box>
+                <Box
+                  py={3}
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="HBO redesign"
+                    projectDescription="ASP.NET Core, ReactJS, JWT"
+                    projectImage="https://larepublica.pe/resizer/QiEGSkOo5LjiEulnOGDlP3WVQN0=/1200x660/top/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/RIQSOZF3CRDOXJ4VGZ7HHY57ZY.jpg"
+                  />
+                </Box>
+              </Link>
             </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
+            {/*<Grid item xs={12} sm={6} md={4} lg={3}>
               <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
                 <ProjectCard
                   projectHead="Headline"
@@ -169,7 +162,7 @@ const ProjectsSection = () => {
                   }
                 />
               </Box>
-            </Grid>
+                </Grid>*/}
             <Grid item xs={12} sm={6} md={4} lg={3}>
               <Link
                 href="https://postalvida.wordpress.com/"
@@ -182,7 +175,7 @@ const ProjectsSection = () => {
                 >
                   <ProjectCard
                     projectHead="Headline"
-                    projectTitle="Blog de autoyuda"
+                    projectTitle="Self help blog"
                     projectDescription="Wordpress"
                     projectImage="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1159404116.jpg?resize=480:*"
                   />
@@ -190,6 +183,120 @@ const ProjectsSection = () => {
               </Link>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Link
+                href="https://github.com/Carlos4775/caja-unapec"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                <Box
+                  py={3}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="Caja UNAPEC"
+                    projectDescription=".NET Framework"
+                    projectImage="https://unapec.edu.do/media/1521/img-startups-2.jpg"
+                  />
+                </Box>
+              </Link>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Link
+                href="https://github.com/Carlos4775/servicio-crud-java"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                <Box
+                  py={3}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="CRUD as a service"
+                    projectDescription="Java Web"
+                    projectImage="https://www.educative.io/v2api/editorpage/6598730818519040/image/6322773582938112"
+                  />
+                </Box>
+              </Link>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Link
+                href="https://github.com/Carlos4775/mi-banco-presta"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                <Box
+                  py={3}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="Mibanco Presta"
+                    projectDescription="Java Web"
+                    projectImage="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2019_45/3090011/191107-money-savings-stock-ew-800p.jpg"
+                  />
+                </Box>
+              </Link>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Link
+                href="https://github.com/Carlos4775/lectura-xml-java"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                <Box
+                  py={3}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="XML Reading"
+                    projectDescription="Java web"
+                    projectImage="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/XML.svg/1200px-XML.svg.png"
+                  />
+                </Box>
+              </Link>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Link
+                href="https://github.com/Carlos4775/escritura-xml-java"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                <Box
+                  py={3}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="XML Writing"
+                    projectDescription="Java web"
+                    projectImage="https://internetpasoapaso.com/wp-content/uploads/aplicaciones-de-android-para-leer-archivos-XML.jpg"
+                  />
+                </Box>
+              </Link>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <Link
+                href="https://github.com/Carlos4775/Practice6Cubes"
+                style={{ textDecoration: "none" }}
+                target="_blank"
+              >
+                <Box
+                  py={3}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <ProjectCard
+                    projectHead="Headline"
+                    projectTitle="OLAP cubes"
+                    projectDescription=".NET SSAS"
+                    projectImage="https://cdn4.iconfinder.com/data/icons/coding-6/100/programming-module-coding-programming-rubik-cube-algorithm-puzzle-challenge-problem-solving-512.png"
+                  />
+                </Box>
+              </Link>
+            </Grid>
+            {/*<Grid item xs={12} sm={6} md={4} lg={3}>
               <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
                 <ProjectCard
                   projectHead="Headline"
@@ -211,7 +318,7 @@ const ProjectsSection = () => {
                   }
                 />
               </Box>
-            </Grid>
+                </Grid>*/}
             {/*<Grid item xs={12} sm={6} md={4} lg={3}>
               <Box py={3} style={{ display: "flex", justifyContent: "center" }}>
                 <ProjectCard

@@ -5,8 +5,9 @@ import ButtonBase from "@material-ui/core/ButtonBase";
 import { useSpring, animated } from "react-spring";
 import TypeWriterEffect from "react-typewriter-effect";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Particles from "react-particles-js";
 import mifoto from "../img/ctorres.jpg";
+import { School } from "@material-ui/icons";
+import Particles from "react-particles";
 
 const useStyles = makeStyles(() => ({
   img: {
@@ -38,7 +39,14 @@ const MainSection = () => {
         padding: "100px 0px",
       }}
     >
-      {matches ? <Particles style={{ position: "absolute" }}></Particles> : ""}
+      {matches ? (
+        <Particles
+          id="tsparticles"
+          style={{ position: "absolute" }}
+        ></Particles>
+      ) : (
+        ""
+      )}
       <Container fixed>
         <Grid container spacing={2}>
           <Box clone order={{ xs: 2, md: 1 }}>
@@ -86,15 +94,28 @@ const MainSection = () => {
                     Technology and web design.
                   </Typography>
                 </Grid>
-                <Grid item>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={classes.button}
-                    href="#projects"
-                  >
-                    Projects
-                  </Button>
+                <Grid item xs container direction="row" spacing={2}>
+                  <Grid item>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={classes.button}
+                      href="#projects"
+                    >
+                      Projects
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={classes.button}
+                      href="https://drive.google.com/file/d/1fwmqAYe9yzncbyEB-lzNob-7FkVfLxHP/view?usp=sharing"
+                      target="_blank"
+                    >
+                      <School />
+                    </Button>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>

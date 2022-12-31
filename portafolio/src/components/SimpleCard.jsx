@@ -12,23 +12,25 @@ const useStyles = makeStyles({
     padding: "10px 0px",
     display: "flex",
     justifyContent: "center",
-    color: "#000",
+    color: "#000"
   },
   subtitle: {
     padding: "10px 0px",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "center"
   },
   text: {
     padding: "10px 0px",
-    textAlign: "center",
+    display: "flex",
+    justifyContent: "center",
+    textAlign: "center"
   },
   icon: {
     height: "80px",
     width: "auto",
     display: "flex",
     justifyContent: "center",
-    alignContent: "center",
+    alignContent: "center"
   },
 });
 

@@ -36,7 +36,7 @@ const ProjectCard = ({
         }}
       >
         <CardHeader avatar={projectStatus} />
-        <CardMedia className={classes.media} />
+        <CardMedia className={classes.media} component='img' />
         <CardContent></CardContent>
       </Card>
       <Typography

@@ -27,7 +27,7 @@ const ServicesSection = () => {
                 title="HTML/CSS"
                 icon={<img src={tag} alt="tag" />}
                 subtitle="User focused"
-                text="A website should be designed for the people who will use it, so that's exactly what I do. User focused design should be the primary goal of any website."
+                text={<p>A website should be designed for the people who will use it, so that's exactly what I do. User focused design should be the primary goal of any website.</p>}
               />
             </Grid>
             <Grid item xs={12} md={4}>
@@ -35,7 +35,7 @@ const ServicesSection = () => {
                 title="Application UI"
                 icon={<img src={person} alt="person" />}
                 subtitle="Responsive and fast"
-                text="Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible."
+                text={<p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.</p>}
               />
             </Grid>
             <Grid item xs={12} md={4}>
@@ -43,7 +43,7 @@ const ServicesSection = () => {
                 title="Performance"
                 icon={<img src={speed} alt="speed" />}
                 subtitle="Effective process"
-                text="Having a fast website is key to keeping people around converts them into customers. There are a myriad of techniques involved in making a fast."
+                text={<p>Having a fast website is key to keeping people around converts them into customers. There are a myriad of techniques involved in making a fast.</p>}
               />
             </Grid>
           </Grid>

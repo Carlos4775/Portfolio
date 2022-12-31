@@ -55,7 +55,7 @@ const MainSection = () => {
               xs={12}
               md={6}
               alignContent="center"
-              justify="center"
+              justifyContent="center"
               container
             >
               <Grid item xs container direction="column" spacing={2}>
@@ -126,7 +126,7 @@ const MainSection = () => {
               xs={12}
               md={6}
               alignContent="center"
-              justify="center"
+              justifyContent="center"
               container
             >
               <Box py={3} my={3}>

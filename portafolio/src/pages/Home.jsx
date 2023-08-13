@@ -1,3 +1,4 @@
+import ExperienceSection from "../components/ExperienceSection";
 import FormationSection from "../components/FormationSection";
 import MainSection from "../components/MainSection";
 import ProjectsSection from "../components/ProjectsSection";
@@ -11,6 +12,9 @@ const Home = () => {
         <MainSection />
         <div id="services">
           <ServicesSection />
+        </div>
+        <div id="experience">
+          <ExperienceSection />
         </div>
         <div id="formation">
           <FormationSection

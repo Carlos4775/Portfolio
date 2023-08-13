@@ -34,7 +34,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard({ title, icon, subtitle, text }) {
+export default function SimpleCard({ title, icon, subtitle, text, iconAltText }) {
   const classes = useStyles();
   const ref = useRef();
   const [isHovered, setHovered] = useState(false);
@@ -111,7 +111,9 @@ export default function SimpleCard({ title, icon, subtitle, text }) {
           >
             {title}
           </Typography>
-          <div className={classes.icon}>{icon}</div>
+          <div className={classes.icon}>
+            <img src={icon} alt={iconAltText} height={80} width={80} />
+          </div>
           <Typography className={classes.subtitle} color="textSecondary">
             {subtitle}
           </Typography>

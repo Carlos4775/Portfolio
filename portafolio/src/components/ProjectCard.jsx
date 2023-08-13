@@ -21,6 +21,7 @@ const ProjectCard = ({
   projectTitle,
   projectDescription,
   projectImage,
+  projectAltImage,
   projectStatus,
 }) => {
   const classes = useStyles();
@@ -36,7 +37,7 @@ const ProjectCard = ({
         }}
       >
         <CardHeader avatar={projectStatus} />
-        <CardMedia className={classes.media} component='img' />
+        <CardMedia className={classes.media} component='img' alt={projectAltImage} />
         <CardContent></CardContent>
       </Card>
       <Typography

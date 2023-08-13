@@ -103,8 +103,8 @@ export default function Navbar() {
         <img
           src={logo}
           alt="logo"
-          height="120px"
-          width="auto"
+          height={120}
+          width={210}
           onClick={scrollToTop}
           style={{ cursor: "pointer" }}
         />

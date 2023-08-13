@@ -31,6 +31,20 @@ const useStyles = makeStyles(() => ({
       fontSize: "15px",
     },
   },
+  footer: {
+    backgroundColor: "#2E3445",
+    position: "relative",
+    bottom: "0px",
+    width: "100%",
+    minHeight: "10vh",
+    paddingBottom: "10px",
+  },
+  copyright: {
+    color: "#fff",
+    display: "flex",
+    justifyContent: "center",
+    paddingTop: "40px",
+  },
 }));
 
 const Footer = () => {
@@ -86,7 +100,12 @@ const Footer = () => {
                 >
                   <ListItem button>
                     <ListItemIcon>
-                      <img src={instagramicon} alt="instagram" />
+                      <img
+                        src={instagramicon}
+                        alt="instagram"
+                        height={24}
+                        width={24}
+                      />
                     </ListItemIcon>
                     <ListItemText primary="carlost_06" />
                   </ListItem>
@@ -97,7 +116,7 @@ const Footer = () => {
                 >
                   <ListItem button>
                     <ListItemIcon>
-                      <img src={emailicon} alt="email" />
+                      <img src={emailicon} alt="email" height={24} width={24} />
                     </ListItemIcon>
                     <p style={{ display: "inline-block" }}>
                       carlos.torres.graciano
@@ -114,7 +133,12 @@ const Footer = () => {
                 >
                   <ListItem button>
                     <ListItemIcon>
-                      <img src={linkedinicon} alt="linkedin" />
+                      <img
+                        src={linkedinicon}
+                        alt="linkedin"
+                        height={24}
+                        width={24}
+                      />
                     </ListItemIcon>
                     <ListItemText primary="carlosmtorresg" />
                   </ListItem>
@@ -127,7 +151,12 @@ const Footer = () => {
                 >
                   <ListItem button>
                     <ListItemIcon>
-                      <img src={githubicon} alt="github" />
+                      <img
+                        src={githubicon}
+                        alt="github"
+                        height={24}
+                        width={24}
+                      />
                     </ListItemIcon>
                     <ListItemText primary="@Carlos4775" />
                   </ListItem>
@@ -137,23 +166,8 @@ const Footer = () => {
           </Grid>
         </Container>
       </div>
-      <div
-        style={{
-          backgroundColor: "#2E3445",
-          position: "relative",
-          bottom: "0px",
-          width: "100%",
-          minHeight: "10vh",
-        }}
-      >
-        <span
-          style={{
-            color: "#fff",
-            display: "flex",
-            justifyContent: "center",
-            paddingTop: "40px",
-          }}
-        >
+      <div className={classes.footer}>
+        <span className={classes.copyright}>
           2021 Carlos Torres. All rights reserved
         </span>
       </div>

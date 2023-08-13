@@ -6,10 +6,18 @@
 .ribbon {
   width: 80px;
   height: 160px;
-  border-bottom: 3px solid #73cca8;
-  border-top: 3px solid #73cca8;
   border-left: 10px solid #73cca8;
   border-right: 3px;
+}
+
+.ribbon2 {
+  height: 160px;
+  border-right: 10px solid #73cca8;
+  border-right: 3px;
+}
+
+.ribbon:last-child {
+  border-left: none;
 }
 
 @media only screen and (max-width: 768px) {

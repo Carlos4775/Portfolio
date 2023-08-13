@@ -5,9 +5,8 @@ import ButtonBase from "@material-ui/core/ButtonBase";
 import { useSpring, animated } from "react-spring";
 import TypeWriterEffect from "react-typewriter-effect";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import mifoto from "../img/ctorres.jpg";
+import mifoto from "../img/ctorres.webp";
 import { School } from "@material-ui/icons";
-import Particles from "react-particles";
 
 const useStyles = makeStyles(() => ({
   img: {
@@ -39,14 +38,6 @@ const MainSection = () => {
         padding: "100px 0px",
       }}
     >
-      {matches ? (
-        <Particles
-          id="tsparticles"
-          style={{ position: "absolute" }}
-        ></Particles>
-      ) : (
-        ""
-      )}
       <Container fixed>
         <Grid container spacing={2}>
           <Box clone order={{ xs: 2, md: 1 }}>
@@ -72,6 +63,7 @@ const MainSection = () => {
                     text="Hey, I'm Carlos Torres"
                     typeSpeed={100}
                   />
+                  <div id="particles-js"></div>
                   <Typography
                     variant="subtitle1"
                     gutterBottom
@@ -147,6 +139,9 @@ const MainSection = () => {
                       alt="Profile"
                       src={mifoto}
                       style={{ zIndex: 2 }}
+                      fetchpriority="high"
+                      height={250}
+                      width={250}
                     />
                   </animated.div>
                 </ButtonBase>

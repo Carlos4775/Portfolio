@@ -1,29 +1,24 @@
 import { Box, Container, Divider, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
-import htmlicon from "../icons/integration_instructions_black_24dp.svg";
-import cssicon from "../icons/style_black_24dp.svg";
-import javascripticon from "../icons/smart_button_black_24dp.svg";
-import wordpressicon from "../icons/web_black_24dp.svg";
-import sqlicon from "../icons/dns_black_24dp.svg";
-import figmaicon from "../icons/account_tree_black_24dp.svg";
-import dotneticon from "../icons/application-cog.svg";
-import javaicon from "../icons/application-braces.svg";
+
 import "../figure.css";
+import { abilities, academicHistory } from "../data/data.js";
+import React, { useEffect, useState } from "react";
 
 const useStyles = makeStyles({
   titleAbilities: {
     fontSize: 24,
     padding: "10px 0px",
-    color: "#000",
     fontWeight: "bold",
     display: "flex",
     justifyContent: "center",
+    color: "#000000",
   },
   titleEducation: {
     fontSize: 24,
     padding: "10px 0px",
-    color: "#000",
+    color: "#000000",
     fontWeight: "bold",
     display: "flex",
     justifyContent: "center",
@@ -31,15 +26,39 @@ const useStyles = makeStyles({
   text: {
     padding: "10px 0px",
   },
+  boldText: {
+    fontWeight: "bold",
+  },
 });
 
+const customHrStyle = {
+  margin: "0px",
+  height: "3px",
+  backgroundColor: "#73cca8",
+  border: "none",
+};
+
 const FormationSection = ({ titleAbilities, text }) => {
+  const [isMobileView, setIsMobileView] = useState(false);
   const classes = useStyles();
+
+  useEffect(() => {
+    const setResponsiveness = () => {
+      return window.innerWidth < 600
+        ? setIsMobileView(true)
+        : setIsMobileView(false);
+    };
+
+    setResponsiveness();
+
+    window.addEventListener("resize", () => setResponsiveness());
+  }, []);
+
   return (
     <Box py={4}>
       <Container fixed>
-        <Box py={3} my={3}>
-          <Box my={3} color="#939393">
+        <Box py={3} mb={3}>
+          <Box mb={3} color="#939393">
             <Typography variant="h5" gutterBottom>
               FORMATION
             </Typography>
@@ -64,108 +83,103 @@ const FormationSection = ({ titleAbilities, text }) => {
                 {text}
               </Typography>
               <List component="nav">
-                <Grid container direction="row">
-                  <Grid item xs={12} sm={6} style={{ padding: "30px 0px" }}>
-                    <Grid container direction="column">
-                      <Grid item xs={12} sm={6}>
-                        <ListItem button>
-                          <ListItemIcon>
-                            <img src={htmlicon} alt="Html" />
-                          </ListItemIcon>
-                          <ListItemText primary="HTML" />
-                        </ListItem>
-                        <ListItem button>
-                          <ListItemIcon>
-                            <img src={cssicon} alt="CSS" />
-                          </ListItemIcon>
-                          <ListItemText primary="CSS" />
-                        </ListItem>
-                        <ListItem button>
-                          <ListItemIcon>
-                            <img src={javascripticon} alt="JavaScript" />
-                          </ListItemIcon>
-                          <ListItemText primary="JavaScript" />
-                        </ListItem>
-                        <ListItem button>
-                          <ListItemIcon>
-                            <img src={dotneticon} alt="Dotnet" />
-                          </ListItemIcon>
-                          <ListItemText primary=".NET Framework / Core" />
-                        </ListItem>
-                      </Grid>
-                    </Grid>
-                  </Grid>
-                  <Grid item xs={12} sm={6} style={{ padding: "30px 0px" }}>
-                    <Grid container direction="column">
-                      <Grid item>
-                        <ListItem button>
-                          <ListItemIcon>
-                            <img src={wordpressicon} alt="Wordpress" />
-                          </ListItemIcon>
-                          <ListItemText primary="WordPress" />
-                        </ListItem>
-                        <ListItem button>
-                          <ListItemIcon>
-                            <img src={sqlicon} alt="SQL Server" />
-                          </ListItemIcon>
-                          <ListItemText primary="SQL Server" />
-                        </ListItem>
-                        <ListItem button>
-                          <ListItemIcon>
-                            <img src={javaicon} alt="Java web / JSF" />
-                          </ListItemIcon>
-                          <ListItemText primary="Java web / JSF" />
-                        </ListItem>
-                        <ListItem button>
-                          <ListItemIcon>
-                            <img src={figmaicon} alt="Figma" />
-                          </ListItemIcon>
-                          <ListItemText primary="Web Design" />
-                        </ListItem>
-                      </Grid>
-                    </Grid>
-                  </Grid>
+                <Grid container direction="column">
+                  {!isMobileView
+                    ? Array.from({
+                        length: Math.ceil(abilities.length / 2),
+                      }).map((_, rowIndex) => (
+                        <Grid container item key={rowIndex} xs={12} spacing={1}>
+                          {abilities
+                            .slice(rowIndex * 2, rowIndex * 2 + 2)
+                            .map((ability, colIndex) => (
+                              <Grid item xs={6} key={colIndex}>
+                                <ListItem>
+                                  <ListItemIcon>
+                                    <img
+                                      src={ability.icon}
+                                      alt={ability.iconAltText}
+                                      height={24}
+                                      width={24}
+                                    />
+                                  </ListItemIcon>
+                                  <ListItemText primary={ability.ability} />
+                                </ListItem>
+                              </Grid>
+                            ))}
+                        </Grid>
+                      ))
+                    : abilities.map((ability, colIndex) => (
+                        <Grid item xs={6} key={colIndex}>
+                          <ListItem>
+                            <ListItemIcon>
+                              <img
+                                src={ability.icon}
+                                alt={ability.iconAltText}
+                                height={24}
+                                width={24}
+                              />
+                            </ListItemIcon>
+                            <ListItemText primary={ability.ability} />
+                          </ListItem>
+                        </Grid>
+                      ))}
                 </Grid>
               </List>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Typography
-                color="textSecondary"
-                gutterBottom
-                className={classes.titleEducation}
-              >
-                Education
-              </Typography>
+              <Box mb={3}>
+                <Typography
+                  color="textSecondary"
+                  gutterBottom
+                  className={classes.titleEducation}
+                >
+                  Education
+                </Typography>
+              </Box>
               <Grid container spacing={3}>
-                <Grid xs={4} item className="figure">
-                  <Box my={4}>
-                    <div className="ribbon"></div>
-                  </Box>
-                </Grid>
-                <Grid xs={8} item>
-                  <Box mt={3}>
-                    <Typography component="div">
-                      <Box fontWeight="fontWeightBold">IT Technician</Box>
-                    </Typography>
-                    <Typography component="div">
-                      <Box fontWeight="fontWeightLight" fontSize={18}>
-                        María Inmaculada School
+                {academicHistory.map((education, index) => (
+                  <React.Fragment key={index}>
+                    <Grid xs={12} sm={8} item style={{ padding: "0 30px" }}>
+                      <Box mb={isMobileView ? 3 : 0}>
+                        <Typography
+                          gutterBottom
+                          variant="subtitle1"
+                          className={classes.boldText}
+                          align={isMobileView ? "left" : "right"}
+                        >
+                          {education.academicDegree}
+                        </Typography>
+                        <Typography
+                          color="textSecondary"
+                          align={isMobileView ? "left" : "right"}
+                        >
+                          {education.institute}
+                        </Typography>
                       </Box>
-                    </Typography>
-                  </Box>
-                  <Box mt={13}>
-                    <Typography component="div">
-                      <Box fontWeight="fontWeightBold">
-                        Software Engineering
-                      </Box>
-                    </Typography>
-                    <Typography component="div">
-                      <Box fontWeight="fontWeightLight" fontSize={18}>
-                        APEC University
-                      </Box>
-                    </Typography>
-                  </Box>
-                </Grid>
+                    </Grid>
+                    {!isMobileView ? (
+                      <Grid xs={4} item style={{ padding: "0 10px" }}>
+                        <Box
+                          height="100%"
+                          borderRight={
+                            index < academicHistory.length - 1 ? 10 : 0
+                          }
+                          borderColor="#73cca8 !important"
+                          mt={1}
+                        >
+                          <div
+                            className="ribbon2"
+                            style={{ borderColor: "#73cca8" }}
+                          >
+                            <hr style={customHrStyle} />
+                          </div>
+                        </Box>
+                      </Grid>
+                    ) : (
+                      <></>
+                    )}
+                  </React.Fragment>
+                ))}
               </Grid>
             </Grid>
           </Grid>

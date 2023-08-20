@@ -14,7 +14,7 @@ const ExperienceSection = () => {
   const [isMobileView, setIsMobileView] = useState(false);
 
   const customChipStyle = {
-    backgroundColor: "#FFFF",
+    backgroundColor: "#FFFFFF",
     color: "#73CCA8",
     boxShadow: "0px 1px 5px rgba(0, 0, 0, 0.2)",
     fontWeight: "bold",
@@ -24,7 +24,7 @@ const ExperienceSection = () => {
   const customHrStyle = {
     margin: "0px",
     height: "3px",
-    backgroundColor: "#73cca8",
+    backgroundColor: "#73CCA8",
     border: "none",
   };
 
@@ -62,7 +62,7 @@ const ExperienceSection = () => {
                         <Box
                           height="100%"
                           borderLeft={index < experiences.length - 1 ? 10 : 0}
-                          borderColor="#73cca8"
+                          borderColor="#73CCA8"
                           mt={1}
                         >
                           <div className="ribbon">

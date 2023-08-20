@@ -17,13 +17,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const ProjectCard = ({
-  projectTitle,
-  projectDescription,
-  projectImage,
-  projectAltImage,
-  projectStatus,
-}) => {
+const ProjectCard = ({ title, description, image, altImage, status }) => {
   const classes = useStyles();
 
   return (
@@ -31,13 +25,13 @@ const ProjectCard = ({
       <Card
         className={classes.root}
         style={{
-          backgroundImage: `url(${projectImage})`,
+          backgroundImage: `url(${image})`,
           backgroundSize: "cover",
           cursor: "pointer",
         }}
       >
-        <CardHeader avatar={projectStatus} />
-        <CardMedia className={classes.media} component='img' alt={projectAltImage} />
+        <CardHeader avatar={status} />
+        <CardMedia className={classes.media} component="img" alt={altImage} />
         <CardContent></CardContent>
       </Card>
       <Typography
@@ -46,11 +40,11 @@ const ProjectCard = ({
         component="p"
         style={{ marginTop: "20px", fontWeight: "bold" }}
       >
-        {projectTitle}
+        {title}
       </Typography>
 
       <Typography variant="body2" color="textSecondary">
-        {projectDescription}
+        {description}
       </Typography>
     </div>
   );

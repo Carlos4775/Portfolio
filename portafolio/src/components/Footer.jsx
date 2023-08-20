@@ -17,7 +17,7 @@ import githubicon from "../icons/iconmonstr-github-1.svg";
 
 const useStyles = makeStyles(() => ({
   custom: {
-    color: "#fff",
+    color: "#ffffff",
   },
   button: {
     backgroundColor: "#73CCA8",
@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   list: {
-    color: "#fff",
+    color: "#ffffff",
     "@media screen and (max-width: 768px)": {
       fontSize: "15px",
     },
@@ -40,7 +40,7 @@ const useStyles = makeStyles(() => ({
     paddingBottom: "10px",
   },
   copyright: {
-    color: "#fff",
+    color: "#ffffff",
     display: "flex",
     justifyContent: "center",
     paddingTop: "40px",
@@ -96,7 +96,7 @@ const Footer = () => {
                   href="https://www.instagram.com/carlost_06/"
                   target="_blank"
                   rel="noreferrer"
-                  style={{ textDecoration: "none", color: "#fff" }}
+                  style={{ textDecoration: "none", color: "#ffffff" }}
                 >
                   <ListItem button>
                     <ListItemIcon>
@@ -112,7 +112,7 @@ const Footer = () => {
                 </a>
                 <a
                   href="mailto:carlos.torres.graciano@outlook.com"
-                  style={{ textDecoration: "none", color: "#fff" }}
+                  style={{ textDecoration: "none", color: "#ffffff" }}
                 >
                   <ListItem button>
                     <ListItemIcon>
@@ -129,7 +129,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/in/carlosmtorresg/"
                   target="_blank"
                   rel="noreferrer"
-                  style={{ textDecoration: "none", color: "#fff" }}
+                  style={{ textDecoration: "none", color: "#ffffff" }}
                 >
                   <ListItem button>
                     <ListItemIcon>
@@ -147,7 +147,7 @@ const Footer = () => {
                   href="https://github.com/Carlos4775"
                   target="_blank"
                   rel="noreferrer"
-                  style={{ textDecoration: "none", color: "#fff" }}
+                  style={{ textDecoration: "none", color: "#ffffff" }}
                 >
                   <ListItem button>
                     <ListItemIcon>

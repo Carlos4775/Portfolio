@@ -1,7 +1,6 @@
 import { Box, Container, Divider, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
-
 import "../figure.css";
 import { abilities, academicHistory } from "../data/data.js";
 import React, { useEffect, useState } from "react";

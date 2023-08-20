@@ -5,7 +5,7 @@ import ButtonBase from "@material-ui/core/ButtonBase";
 import { useSpring, animated } from "react-spring";
 import TypeWriterEffect from "react-typewriter-effect";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import mifoto from "../img/ctorres.webp";
+import oneLineDrawingProgrammer from "../img/single-one-line-drawing-programmer.svg";
 import { School } from "@material-ui/icons";
 
 const useStyles = makeStyles(() => ({
@@ -35,7 +35,7 @@ const MainSection = () => {
     <div
       style={{
         backgroundColor: "#222733",
-        padding: "100px 0px",
+        padding: "80px 0px",
       }}
     >
       <Container fixed>
@@ -126,10 +126,8 @@ const MainSection = () => {
                   style={{
                     position: "relative",
                     width: "100%",
-                    background: "white",
                     borderRadius: "0% 0% 0% 0% / 0% 0% 0% 0%",
                     color: "white",
-                    boxShadow: "0px -29px 0px 13px #7380A3",
                     transition: "all .4s ease",
                   }}
                 >
@@ -137,7 +135,7 @@ const MainSection = () => {
                     <img
                       className={classes.img}
                       alt="Profile"
-                      src={mifoto}
+                      src={oneLineDrawingProgrammer}
                       style={{ zIndex: 2 }}
                       fetchpriority="high"
                       height={250}

@@ -30,7 +30,7 @@ const ProjectsSection = () => {
             {projects.map((project, index) => (
               <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
                 <Link
-                  href={project.projectUrl}
+                  href={project.url}
                   style={{ textDecoration: "none" }}
                   target="_blank"
                 >
@@ -39,11 +39,10 @@ const ProjectsSection = () => {
                     style={{ display: "flex", justifyContent: "center" }}
                   >
                     <ProjectCard
-                      projectHead="Headline"
-                      projectTitle={project.title}
-                      projectDescription={project.description}
-                      projectImage={project.image}
-                      projectAltImage={project.altImage}
+                      title={project.title}
+                      description={project.description}
+                      image={project.image}
+                      altImage={project.altImage}
                     />
                   </Box>
                 </Link>

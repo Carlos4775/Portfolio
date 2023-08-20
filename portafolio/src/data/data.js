@@ -22,7 +22,7 @@ import figmaicon from "../icons/account_tree_black_24dp.svg";
 import dotneticon from "../icons/application-cog.svg";
 import javaicon from "../icons/application-braces.svg";
 
-export const data =
+export const services =
     [
         {
             title: "HTML/CSS",

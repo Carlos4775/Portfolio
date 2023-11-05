@@ -66,7 +66,11 @@ const Footer = () => {
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
               <Box py={2}>
-                <Typography variant="h5" className={classes.custom}>
+                <Typography
+                  variant="h5"
+                  component="h5"
+                  className={classes.custom}
+                >
                   Let's Work Together
                 </Typography>
               </Box>

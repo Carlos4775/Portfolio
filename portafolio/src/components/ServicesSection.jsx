@@ -7,12 +7,12 @@ const ServicesSection = () => {
     <Box py={4}>
       <Container fixed>
         <Box py={3} my={3}>
-          <Typography variant="h5" gutterBottom>
-            <Box my={3} color="#939393">
+          <Box my={3} color="#939393">
+            <Typography variant="h5" component="h5" gutterBottom>
               SERVICES
-            </Box>
-            <Divider variant="fullWidth" component="div" />
-          </Typography>
+            </Typography>
+          </Box>
+          <Divider variant="fullWidth" component="div" />
         </Box>
         <Box>
           <Grid

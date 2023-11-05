@@ -14,7 +14,7 @@ const ProjectsSection = () => {
     <Box py={4}>
       <Container fixed>
         <Box py={3} mb={3}>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" component="h5" gutterBottom>
             <Box mb={3} color="#939393">
               PROJECTS
             </Box>

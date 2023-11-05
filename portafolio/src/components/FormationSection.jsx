@@ -67,7 +67,7 @@ const FormationSection = ({ titleAbilities, text }) => {
       <Container fixed>
         <Box py={3} mb={3}>
           <Box mb={3} color="#939393">
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h5" component="h5" gutterBottom>
               FORMATION
             </Typography>
           </Box>

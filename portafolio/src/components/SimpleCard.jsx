@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
-import { Card, CardContent, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Card, CardContent, Typography, makeStyles } from "@material-ui/core";
 import { animated, useSpring } from "react-spring";
 
 const useStyles = makeStyles({
@@ -12,29 +11,35 @@ const useStyles = makeStyles({
     padding: "10px 0px",
     display: "flex",
     justifyContent: "center",
-    color: "#000"
+    color: "#000",
   },
   subtitle: {
     padding: "10px 0px",
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   text: {
     padding: "10px 0px",
     display: "flex",
     justifyContent: "center",
-    textAlign: "center"
+    textAlign: "center",
   },
   icon: {
     height: "80px",
     width: "auto",
     display: "flex",
     justifyContent: "center",
-    alignContent: "center"
+    alignContent: "center",
   },
 });
 
-export default function SimpleCard({ title, icon, subtitle, text, iconAltText }) {
+export default function SimpleCard({
+  title,
+  icon,
+  subtitle,
+  text,
+  iconAltText,
+}) {
   const classes = useStyles();
   const ref = useRef();
   const [isHovered, setHovered] = useState(false);

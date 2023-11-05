@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Box,
   Chip,
@@ -8,7 +9,6 @@ import {
 } from "@material-ui/core";
 import "../figure.css";
 import { experiences } from "../data/data.js";
-import { useEffect, useState } from "react";
 
 const ExperienceSection = () => {
   const [isMobileView, setIsMobileView] = useState(false);

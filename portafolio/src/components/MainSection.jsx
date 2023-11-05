@@ -1,12 +1,18 @@
-import { Box, Button, Container, Grid } from "@material-ui/core";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import ButtonBase from "@material-ui/core/ButtonBase";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  makeStyles,
+  Typography,
+  useTheme,
+  ButtonBase,
+  useMediaQuery,
+} from "@material-ui/core";
+import { School } from "@material-ui/icons";
 import { useSpring, animated } from "react-spring";
 import TypeWriterEffect from "react-typewriter-effect";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import oneLineDrawingProgrammer from "../img/single-one-line-drawing-programmer.svg";
-import { School } from "@material-ui/icons";
 
 const useStyles = makeStyles(() => ({
   img: {
@@ -81,9 +87,8 @@ const MainSection = () => {
                       marginBottom: "40px",
                     }}
                   >
-                    I’m a software engineering student web developer who uses
-                    C#, Java and JavaScript. Passionate for Open Source
-                    Technology and web design.
+                    I’m a software engineer who uses C#, Java and JavaScript.
+                    Passionate for Open Source Technology and web design.
                   </Typography>
                 </Grid>
                 <Grid item xs container direction="row" spacing={2}>

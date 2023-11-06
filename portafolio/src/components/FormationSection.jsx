@@ -101,7 +101,10 @@ const FormationSection = ({ titleAbilities, text }) => {
                             .slice(rowIndex * 2, rowIndex * 2 + 2)
                             .map((ability, colIndex) => (
                               <Grid item xs={6} key={colIndex}>
-                                <ListItem>
+                                <ListItem
+                                  itemScope
+                                  itemType="http://schema.org/ListItem"
+                                >
                                   <ListItemIcon>
                                     <img
                                       src={ability.icon}
@@ -118,7 +121,10 @@ const FormationSection = ({ titleAbilities, text }) => {
                       ))
                     : abilities.map((ability, colIndex) => (
                         <Grid item xs={6} key={colIndex}>
-                          <ListItem>
+                          <ListItem
+                            itemScope
+                            itemType="http://schema.org/ListItem"
+                          >
                             <ListItemIcon>
                               <img
                                 src={ability.icon}
@@ -144,22 +150,36 @@ const FormationSection = ({ titleAbilities, text }) => {
                   Education
                 </Typography>
               </Box>
-              <Grid container spacing={3}>
+              <Grid
+                container
+                spacing={3}
+                itemScope
+                itemType="http://schema.org/EducationalOccupationalCredential"
+              >
                 {academicHistory.map((education, index) => (
                   <React.Fragment key={index}>
-                    <Grid xs={12} sm={8} item style={{ padding: "0 30px" }}>
+                    <Grid
+                      xs={12}
+                      sm={8}
+                      item
+                      style={{ padding: "0 30px" }}
+                      itemProp="educationalCredentialAwarded"
+                      itemType="http://schema.org/EducationalOccupationalCredential"
+                    >
                       <Box mb={isMobileView ? 3 : 0}>
                         <Typography
                           gutterBottom
                           variant="subtitle1"
                           className={classes.boldText}
                           align={isMobileView ? "left" : "right"}
+                          itemProp="description"
                         >
                           {education.academicDegree}
                         </Typography>
                         <Typography
                           color="textSecondary"
                           align={isMobileView ? "left" : "right"}
+                          itemProp="issuer"
                         >
                           {education.institute}
                         </Typography>

@@ -15,6 +15,32 @@ import emailicon from "../icons/email_black_24dp.svg";
 import linkedinicon from "../icons/iconmonstr-linkedin-3.svg";
 import githubicon from "../icons/iconmonstr-github-1.svg";
 
+const socialLinks = [
+  {
+    href: "https://www.instagram.com/carlost_06/",
+    target: "_blank",
+    icon: instagramicon,
+    text: "carlost_06",
+  },
+  {
+    href: "mailto:carlos.torres.graciano@outlook.com",
+    icon: emailicon,
+    text: "carlos.torres.graciano",
+  },
+  {
+    href: "https://www.linkedin.com/in/carlosmtorresg/",
+    target: "_blank",
+    icon: linkedinicon,
+    text: "carlosmtorresg",
+  },
+  {
+    href: "https://github.com/Carlos4775",
+    target: "_blank",
+    icon: githubicon,
+    text: "@Carlos4775",
+  },
+];
+
 const useStyles = makeStyles(() => ({
   custom: {
     color: "#ffffff",
@@ -95,83 +121,44 @@ const Footer = () => {
                 component="nav"
                 aria-label="main mailbox folders"
                 className={classes.list}
+                itemScope
+                itemType="http://schema.org/ItemList"
               >
-                <a
-                  href="https://www.instagram.com/carlost_06/"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ textDecoration: "none", color: "#ffffff" }}
-                >
-                  <ListItem button>
-                    <ListItemIcon>
-                      <img
-                        src={instagramicon}
-                        alt="instagram"
-                        height={24}
-                        width={24}
-                      />
-                    </ListItemIcon>
-                    <ListItemText primary="carlost_06" />
-                  </ListItem>
-                </a>
-                <a
-                  href="mailto:carlos.torres.graciano@outlook.com"
-                  style={{ textDecoration: "none", color: "#ffffff" }}
-                >
-                  <ListItem button>
-                    <ListItemIcon>
-                      <img src={emailicon} alt="email" height={24} width={24} />
-                    </ListItemIcon>
-                    <p style={{ display: "inline-block" }}>
-                      carlos.torres.graciano
-                      <br />
-                      @outlook.com
-                    </p>
-                  </ListItem>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/carlosmtorresg/"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ textDecoration: "none", color: "#ffffff" }}
-                >
-                  <ListItem button>
-                    <ListItemIcon>
-                      <img
-                        src={linkedinicon}
-                        alt="linkedin"
-                        height={24}
-                        width={24}
-                      />
-                    </ListItemIcon>
-                    <ListItemText primary="carlosmtorresg" />
-                  </ListItem>
-                </a>
-                <a
-                  href="https://github.com/Carlos4775"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ textDecoration: "none", color: "#ffffff" }}
-                >
-                  <ListItem button>
-                    <ListItemIcon>
-                      <img
-                        src={githubicon}
-                        alt="github"
-                        height={24}
-                        width={24}
-                      />
-                    </ListItemIcon>
-                    <ListItemText primary="@Carlos4775" />
-                  </ListItem>
-                </a>
+                {socialLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    target={link.target}
+                    rel="noreferrer"
+                    style={{ textDecoration: "none", color: "#ffffff" }}
+                    itemScope
+                    itemType="http://schema.org/ProfilePage"
+                  >
+                    <ListItem button itemProp="itemListElement">
+                      <ListItemIcon>
+                        <img
+                          src={link.icon}
+                          alt={link.text}
+                          height={24}
+                          width={24}
+                          itemType="image"
+                        />
+                      </ListItemIcon>
+                      <ListItemText primary={link.text} itemType="name" />
+                    </ListItem>
+                  </a>
+                ))}
               </List>
             </Grid>
           </Grid>
         </Container>
       </div>
-      <div className={classes.footer}>
-        <span className={classes.copyright}>
+      <div
+        className={classes.footer}
+        itemScope
+        itemType="http://schema.org/CreativeWork"
+      >
+        <span className={classes.copyright} itemProp="copyrightHolder">
           2021 Carlos Torres. All rights reserved
         </span>
       </div>

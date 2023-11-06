@@ -19,15 +19,28 @@ const ServicesSection = () => {
             container
             spacing={4}
             style={{ display: "flex", justifyContent: "center" }}
+            itemScope
+            itemType="http://schema.org/ItemList"
           >
             {services.map((service, index) => (
-              <Grid item xs={12} md={4} key={index}>
+              <Grid
+                item
+                xs={12}
+                md={4}
+                key={index}
+                itemProp="itemListElement"
+                itemScope
+                itemType="http://schema.org/Service"
+              >
                 <SimpleCard
                   title={service.title}
                   subtitle={service.subtitle}
                   text={service.text}
                   icon={service.icon}
                   alt={service.iconAltText}
+                  itemProp="offers"
+                  itemScope
+                  itemType="http://schema.org/Offer"
                 />
               </Grid>
             ))}

@@ -52,9 +52,21 @@ const ExperienceSection = () => {
           <Divider variant="fullWidth" component="div" />
         </Box>
         <Box>
-          <Grid container spacing={3}>
+          <Grid
+            container
+            spacing={3}
+            itemScope
+            itemType="http://schema.org/ItemList"
+          >
             {experiences.map((exp, index) => (
-              <Grid item xs={12} key={index}>
+              <Grid
+                itemProp="itemListElement"
+                itemScope
+                itemType="http://schema.org/CreativeWork"
+                item
+                xs={12}
+                key={index}
+              >
                 <Grid container spacing={3}>
                   {!isMobileView ? (
                     <>
@@ -71,7 +83,11 @@ const ExperienceSection = () => {
                         </Box>
                       </Grid>
                       <Grid xs={2} item style={{ padding: "0 10px" }}>
-                        <Box fontWeight="fontWeightLight" fontSize={16}>
+                        <Box
+                          fontWeight="fontWeightLight"
+                          fontSize={16}
+                          itemProp="datePublished"
+                        >
                           {exp.yearFrom} - {exp.yearTo}
                         </Box>
                       </Grid>
@@ -85,13 +101,21 @@ const ExperienceSection = () => {
                     item
                     style={{ padding: "0 10px" }}
                   >
-                    <Box fontWeight="fontWeightBold" fontSize={20}>
+                    <Box
+                      fontWeight="fontWeightBold"
+                      fontSize={20}
+                      itemProp="name"
+                    >
                       {exp.position}
                     </Box>
-                    <Box fontWeight="fontWeightRegular" fontSize={16}>
+                    <Box
+                      fontWeight="fontWeightRegular"
+                      fontSize={16}
+                      itemProp="publisher"
+                    >
                       {exp.companyName}
                     </Box>
-                    <Box>
+                    <Box itemProp="description">
                       <ul>
                         {exp.roles.map((role, index) => (
                           <li key={index} style={{ marginBottom: 20 }}>

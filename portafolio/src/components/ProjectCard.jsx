@@ -21,7 +21,7 @@ const ProjectCard = ({ title, description, image, altImage, status }) => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div itemScope itemType="http://schema.org/SoftwareApplication">
       <Card
         className={classes.root}
         style={{
@@ -31,19 +31,25 @@ const ProjectCard = ({ title, description, image, altImage, status }) => {
         }}
       >
         <CardHeader avatar={status} />
-        <CardMedia className={classes.media} component="img" alt={altImage} />
+        <CardMedia
+          className={classes.media}
+          component="img"
+          alt={altImage}
+          itemProp="image"
+        />
         <CardContent></CardContent>
       </Card>
       <Typography
         variant="h6"
         color="textPrimary"
         component="p"
+        itemProp="name"
         style={{ marginTop: "20px", fontWeight: "bold" }}
       >
         {title}
       </Typography>
 
-      <Typography variant="body2" color="textSecondary">
+      <Typography variant="body2" color="textSecondary" itemProp="description">
         {description}
       </Typography>
     </div>

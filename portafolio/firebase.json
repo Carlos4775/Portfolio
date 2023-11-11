@@ -11,6 +11,13 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "redirects": [
+      {
+        "source": "www.carlostorres.tech/**",
+        "destination": "https://carlostorres.tech",
+        "type": 301
+      }
     ]
   }
 }

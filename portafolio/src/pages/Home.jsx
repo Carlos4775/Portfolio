@@ -17,10 +17,7 @@ const Home = () => {
           <ExperienceSection />
         </div>
         <div id="formation">
-          <FormationSection
-            titleAbilities="Abilities"
-            text="An accomplished and skilled person with experience in JavaScript, HTML, CSS, React JS, and other technologies, both frontend and backend. With a firm belief in the power of the web and an intense desire to learn."
-          />
+          <FormationSection />
         </div>
         <div id="projects">
           <ProjectsSection />

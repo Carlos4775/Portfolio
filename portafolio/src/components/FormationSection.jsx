@@ -81,14 +81,17 @@ const FormationSection = ({ titleAbilities, text }) => {
                 gutterBottom
                 className={classes.titleAbilities}
               >
-                {titleAbilities}
+                Abilities
               </Typography>
               <Typography
                 color="textSecondary"
                 gutterBottom
                 className={classes.text}
               >
-                {text}
+                An accomplished and skilled person with experience in
+                JavaScript, HTML, CSS, React JS, and other technologies, both
+                frontend and backend. With a firm belief in the power of the web
+                and an intense desire to learn.
               </Typography>
               <List component="nav">
                 <Grid container direction="column">

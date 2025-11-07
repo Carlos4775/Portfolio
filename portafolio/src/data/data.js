@@ -84,7 +84,6 @@ export const projects =
             image: hboRedesign,
             altImage: "hboRedesign"
         },
-
         {
             url: "https://postalvida.wordpress.com/",
             title: "Self help blog",
@@ -141,12 +140,20 @@ export const projects =
 export const experiences =
     [
         {
+            position: "Senior Visual Programmer",
+            roles: ["Developed and maintained regulatory reporting systems submitted to the Superintendence of Banks, ensuring accuracy, compliance, and timely delivery.", "Designed and implemented fraud monitoring solutions to detect and prevent suspicious transactions, strengthening the bank’s security and compliance framework.", "Contributed to the development and optimization of the BHD customer web portal, enhancing user experience and performance."],
+            yearFrom: "2025",
+            yearTo: "Present",
+            companyName: "BHD Bank",
+            tecnologies: ["Azure services", ".NET Worker Service", ".NET 8", "Angular 20", "SQL Server", "Oracle", "IPC", "API"]
+        },
+        {
             position: "Visual Programmer",
             roles: ["Playing a crucial role in delivering innovative and secure banking solutions to our customers. Collaborating with cross-functional teams, I participate in the design, development, and maintenance of both frontend and backend applications."],
             yearFrom: "2023",
-            yearTo: "Present",
+            yearTo: "2025",
             companyName: "BHD Bank",
-            tecnologies: [".NET Framework", ".NET Core", ".NET 6", "Angular", "Vue JS", "SQL Server", "Oracle", "IPC", "Web services"]
+            tecnologies: [".NET Core", ".NET 6", "Angular", "Vue JS", "SQL Server", "Oracle", "IPC", "Web services", "Strapi"]
         },
         {
             position: "Intermediate Visual Developer",
@@ -154,7 +161,7 @@ export const experiences =
             yearFrom: "2021",
             yearTo: "2023",
             companyName: "FL Betances & Asociados",
-            tecnologies: [".NET Framework", ".NET Core", ".NET 6", "Angular", "Vue JS", "SQL Server", "Oracle", "IPC", "Web services"]
+            tecnologies: [".NET Framework", ".NET Core", "Angular", "Vue JS", "SQL Server", "Oracle"]
         },
         {
             position: "Frontend Developer",
